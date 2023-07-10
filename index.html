@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="tabs.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+          <div class="product-info">
+            <h2>Product Info</h2>
+            <table>
+              <tr>
+                <td>
+                  <label for="part-number">Part Number:</label>
+                </td>
+                <td>
+                  <input type="text" id="part-number" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="description">Description:</label>
+                </td>
+                <td>
+                  <input type="text" id="description" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="material-group">Material Group:</label>
+                </td>
+                <td>
+                  <input type="text" id="material-group" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="company">Company:</label>
+                </td>
+                <td>
+                  <input type="text" id="company" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="revision">Revision:</label>
+                </td>
+                <td>
+                  <input type="text" id="revision" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="details">Details:</label>
+                </td>
+                <td>
+                  <input type="text" id="details" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="assembly">Assembly:</label>
+                </td>
+                <td>
+                  <select id="assembly">
+                    <option value="none" selected disabled hidden>
+                      Select option
+                    </option>
+                    <option value="MAIN">MAIN</option>
+                    <option value="SUB">SUB</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="stage-info">
+            <h2>Stage Info</h2>
+            <table>
+              <tr>
+                <td>
+                  <label for="stage-name">Stage Name:</label>
+                </td>
+                <td>
+                  <select id="stage-name">
+                    <option value="none" selected disabled hidden>
+                      Select a stage
+                    </option>
+                    <option value="Raw Material Purchase">
+                      Raw Material Purchase
+                    </option>
+                    <option value="Profile Cutting">Profile Cutting</option>
+                    <option value="Profile Inspection">
+                      Profile Inspection
+                    </option>
+                    <option value="Fit Up">Fit Up</option>
+                    <option value="Fit Up Inspection">Fit Up Inspection</option>
+                    <option value="Welding">Welding</option>
+                    <option value="Welding Inspection">
+                      Welding Inspection
+                    </option>
+                    <option value="Testing">Testing</option>
+                    <option value="Pre-Machining">Pre-Machining</option>
+                    <option value="Machine Inspection">
+                      Machine Inspection
+                    </option>
+                    <option value="Assembly">Assembly</option>
+                    <option value="Painting">Painting</option>
+                    <option value="Final Inspection">Final Inspection</option>
+                    <option value="Dispatch">Dispatch</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="stage-duration">Stage Duration (hrs):</label>
+                </td>
+                <td>
+                  <input type="number" id="stage-duration" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="requirement-info">
+            <h2>Requirement Info</h2>
+            <table>
+              <tr>
+                <td>
+                  <label for="requirement-name">Requirement Name:</label>
+                </td>
+                <td>
+                  <input type="text" id="requirement-name" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="requirement-quantity"
+                    >Requirement Quantity:</label
+                  >
+                </td>
+                <td>
+                  <input type="number" id="requirement-quantity" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="actions">
+            <button id="add-stage" >Add Stage</button>
+            <button id="add-requirement">Add Requirement</button>
+            <button id="add-product">Add Product</button>
+          </div>
+          <div class="actions">
+            <button id="export">Export All</button>
+          </div>
+      </div>
+
+      <div class="right-side">
+
+        <div class="tabs">
+          <button class="tab-button" onclick="toggleTab(1)">Product List</button>
+          <button class="tab-button" onclick="toggleTab(2)">Current Product Info</button>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+          <h2>Product List</h2>
+          <div id="product-list">
+            <!-- Product list will be dynamically generated here -->
+          </div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+          <h2>Current Product Info</h2>
+          <div id="current-info">
+            <!-- Current info will be dynamically generated here -->
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <script src="tabs.js"></script>
+    <script src="actions.js"></script>
+
+  </body>
+</html>
